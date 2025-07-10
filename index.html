@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redwane AIT BRAHIM - Ingénieur Informatique</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-date {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .project-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .lang-progress {
+            margin-bottom: 15px;
+        }
+
+        .lang-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            transition: width 0.8s ease;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="width: 60px; height: 60px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-element" style="width: 40px; height: 40px; top: 20%; right: 20%; animation-delay: 2s;"></div>
+        <div class="floating-element" style="width: 80px; height: 80px; bottom: 20%; left: 15%; animation-delay: 4s;"></div>
+        <div class="floating-element" style="width: 50px; height: 50px; bottom: 10%; right: 10%; animation-delay: 1s;"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1 class="name">Redwane AIT BRAHIM</h1>
+            <p class="title">Ingénieur en Informatique | Développement Logiciel & Cybersécurité</p>
+            <div class="contact-info">
+                <a href="mailto:redwane.aitbrahim67@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    redwane.aitbrahim67@gmail.com
+                </a>
+                <a href="tel:+33767336612" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    07 67 33 66 12
+                </a>
+                <div class="contact-item">
+                    <i class="fas fa-car"></i>
+                    Permis B
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2><i class="fas fa-user-graduate"></i> Profil Professionnel</h2>
+            <p style="font-size: 1.1em; text-align: justify; margin-bottom: 20px;">
+                Étudiant-ingénieur en informatique (Bac+5) avec <strong>3 ans d'expérience</strong> en développement logiciel et cybersécurité. 
+                Expertise démontrée dans la conception d'applications sécurisées, la gestion de projets techniques et l'architecture système. 
+                Recherche un <strong>stage de fin d'études de 6 mois</strong> à partir de <strong>février 2026</strong> pour appliquer mes compétences en environnement professionnel.
+            </p>
+            <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                Télécharger le CV PDF
+            </a>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-code"></i> Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-laptop-code"></i> Langages</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Solidity</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-tools"></i> Technologies</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">UML</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-shield-alt"></i> Sécurité</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Cryptographie</span>
+                        <span class="skill-tag">DMARC</span>
+                        <span class="skill-tag">DKIM</span>
+                        <span class="skill-tag">SPF</span>
+                        <span class="skill-tag">Blockchain</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-cogs"></i> Méthodologies</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Agile</span>
+                        <span class="skill-tag">Tests unitaires</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-project-diagram"></i> Projets & Expériences</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Février 2025</div>
+                    <div class="card">
+                        <h3><i class="fas fa-vote-yea"></i> Application de Vote Sécurisée en Java</h3>
+                        <p>Développement d'une application de vote sécurisée avec architecture robuste et tests complets.</p>
+                        <div class="project-stats">
+                            <div class="stat">500+ utilisateurs simultanés</div>
+                            <div class="stat">15+ fonctionnalités</div>
+                            <div class="stat">95% couverture tests</div>
+                            <div class="stat">40% réduction bugs</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Mars 2025</div>
+                    <div class="card">
+                        <h3><i class="fas fa-network-wired"></i> Réseaux Complexes en C</h3>
+                        <p>Architecture client-serveur avec programmation socket et optimisation des performances.</p>
+                        <div class="project-stats">
+                            <div class="stat">100+ connexions simultanées</div>
+                            <div class="stat">30% amélioration performance</div>
+                            <div class="stat">0 deadlock</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Été 2025</div>
+                    <div class="card">
+                        <h3><i class="fas fa-lock"></i> Application de Messagerie Sécurisée</h3>
+                        <p>Conception d'une application de messagerie avec chiffrement bout-à-bout et authentification avancée.</p>
+                        <div class="project-stats">
+                            <div class="stat">1000+ messages/seconde</div>
+                            <div class="stat">95% réduction spam</div>
+                            <div class="stat">99.9% disponibilité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid">
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - 2026</div>
+                        <div class="card">
+                            <h3>Diplôme d'Ingénieur en Informatique</h3>
+                            <p><strong>Télécom SudParis</strong><br>
+                            Institut Polytechnique de Paris<br>
+                            <em>Spécialisation : Cybersécurité et Développement Logiciel</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="card">
+                            <h3>Classe Préparatoire MP</h3>
+                            <p><strong>Lycée Jean-Bart</strong><br>
+                            Formation intensive en mathématiques et physique</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="card">
+                            <h3>Baccalauréat Scientifique</h3>
+                            <p><strong>Lycée de l'Europe</strong><br>
+                            Mention Très Bien</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-users"></i> Engagement Associatif</h2>
+                <div class="card">
+                    <h3><i class="fas fa-crown"></i> Vice-Président | KRYPTOSPHERE</h3>
+                    <p><strong>2024-2025</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Organisé <strong>5 hackathons</strong> (200+ participants)</li>
+                        <li>Animé <strong>10 workshops</strong> sur Blockchain et IA</li>
+                        <li>Géré budget de <strong>15 000€</strong></li>
+                        <li>Augmenté l'adhésion de <strong>150%</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-heart"></i> Bénévole | INT'ERVENIR</h3>
+                    <p><strong>2023-2025</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li><strong>20+</strong> actions de solidarité</li>
+                        <li><strong>3 projets</strong> coordonnés</li>
+                        <li><strong>50+ bénévoles</strong> mobilisés</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="section">
+            <h2><i class="fas fa-language"></i> Compétences Linguistiques</h2>
+            <div class="lang-progress">
+                <div class="lang-name">
+                    <span><strong>Français</strong></span>
+                    <span>Langue maternelle</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+            
+            <div class="lang-progress">
+                <div class="lang-name">
+                    <span><strong>Anglais</strong></span>
+                    <span>Avancé (C1)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%"></div>
+                </div>
+            </div>
+            
+            <div class="lang-progress">
+                <div class="lang-name">
+                    <span><strong>Allemand</strong></span>
+                    <span>Intermédiaire (B2)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 70%"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Animation des barres de progression
+        window.addEventListener('load', function() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
