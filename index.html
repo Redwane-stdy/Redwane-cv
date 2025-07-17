@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redwane AIT BRAHIM - Ingénieur Informatique</title>
+    <title>Redwane AIT BRAHIM - Computer Science Engineer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -276,6 +275,107 @@
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .personal-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .personal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .personal-card i {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .personal-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .engineering-benefit {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .engineering-benefit h4 {
+            margin-bottom: 8px;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .engineering-benefit p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .international-badge {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .availability-section {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .availability-section h2 {
+            border: none;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .availability-section p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .visa-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .game-dev-highlight {
+            background: linear-gradient(135deg, #9c27b0, #673ab7);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .game-dev-highlight h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -343,7 +443,7 @@
                 <i class="fas fa-user"></i>
             </div>
             <h1 class="name">Redwane AIT BRAHIM</h1>
-            <p class="title">Ingénieur en Informatique | Développement Logiciel & Cybersécurité</p>
+            <p class="title">Computer Science Engineer | Software Development & Cybersecurity</p>
             <div class="contact-info">
                 <a href="mailto:redwane.aitbrahim67@gmail.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -351,39 +451,72 @@
                 </a>
                 <a href="tel:+33767336612" class="contact-item">
                     <i class="fas fa-phone"></i>
-                    07 67 33 66 12
+                    +33 7 67 33 66 12
+                </a>
+                <a href="https://redwane-stdy.github.io/cv/" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    GitHub Portfolio
                 </a>
                 <div class="contact-item">
                     <i class="fas fa-car"></i>
-                    Permis B
+                    EU Driving License
                 </div>
             </div>
         </header>
 
+        <section class="availability-section">
+            <h2><i class="fas fa-calendar-alt"></i> Available for International Internship</h2>
+            <p><strong>6-month Final Year Engineering Internship</strong></p>
+            <p>📅 Available from: <strong>February 2026</strong></p>
+            <p>🌍 Open to: <strong>Worldwide opportunities</strong></p>
+            <div class="visa-info">
+                <p><strong>🇪🇺 EU Citizen</strong> - No visa required for EU countries</p>
+                <p><strong>🛂 Work Authorization</strong> - Can obtain work permits for other countries</p>
+            </div>
+        </section>
+
         <section class="section">
-            <h2><i class="fas fa-user-graduate"></i> Profil Professionnel</h2>
+            <h2><i class="fas fa-user-graduate"></i> Professional Profile</h2>
+            <div class="international-badge">
+                <i class="fas fa-globe"></i> Seeking International Experience
+            </div>
             <p style="font-size: 1.1em; text-align: justify; margin-bottom: 20px;">
-                Étudiant-ingénieur en informatique (Bac+5) avec <strong>3 ans d'expérience</strong> en développement logiciel et cybersécurité. 
-                Expertise démontrée dans la conception d'applications sécurisées, la gestion de projets techniques et l'architecture système. 
-                Recherche un <strong>stage de fin d'études de 6 mois</strong> à partir de <strong>février 2026</strong> pour appliquer mes compétences en environnement professionnel.
+                Computer Science Engineering student (Master's level) with <strong>4+ years of experience</strong> in software development, cybersecurity, and game development. 
+                Proven expertise in secure application design, technical project management, and system architecture. 
+                Seeking a <strong>6-month graduation internship abroad</strong> starting <strong>February 2026</strong> to gain international experience and contribute to innovative projects.
             </p>
             <a href="#" class="download-btn">
                 <i class="fas fa-download"></i>
-                Télécharger le CV PDF
+                Download PDF Resume
             </a>
         </section>
 
         <section class="section">
-            <h2><i class="fas fa-code"></i> Compétences Techniques</h2>
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="game-dev-highlight">
+                <h3><i class="fas fa-gamepad"></i> Game Development Expertise</h3>
+                <p><strong>1+ year experience</strong> in Unity game development with C# programming</p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h4><i class="fas fa-laptop-code"></i> Langages</h4>
+                    <h4><i class="fas fa-laptop-code"></i> Programming Languages</h4>
                     <div class="skill-list">
+                        <span class="skill-tag">C#</span>
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Solidity</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-gamepad"></i> Game Development</h4>
+                    <div class="skill-list">
+                        <span class="skill-tag">Unity 3D</span>
+                        <span class="skill-tag">C# Scripting</span>
+                        <span class="skill-tag">Game Physics</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">2D/3D Graphics</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -397,67 +530,139 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4><i class="fas fa-shield-alt"></i> Sécurité et Spécification</h4>
+                    <h4><i class="fas fa-shield-alt"></i> Security & Formal Methods</h4>
                     <div class="skill-list">
-                        <span class="skill-tag">Cryptographie</span>
-                        <span class="skill-tag">Spécification</span>
-                        <span class="skill-tag">Language B</span>
-                        <span class="skill-tag">Coq</span>
+                        <span class="skill-tag">Cryptography</span>
+                        <span class="skill-tag">Coq Specification</span>
+                        <span class="skill-tag">B Method</span>
                         <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">ProB</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4><i class="fas fa-cogs"></i> Méthodologies</h4>
+                    <h4><i class="fas fa-cogs"></i> Methodologies</h4>
                     <div class="skill-list">
                         <span class="skill-tag">Agile</span>
-                        <span class="skill-tag">Tests unitaires</span>
+                        <span class="skill-tag">Unit Testing</span>
                         <span class="skill-tag">DevOps</span>
                         <span class="skill-tag">Architecture</span>
+                        <span class="skill-tag">Formal Verification</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <h2><i class="fas fa-project-diagram"></i> Projets & Expériences</h2>
+            <h2><i class="fas fa-project-diagram"></i> Projects & Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">Février 2025</div>
+                    <div class="timeline-date">2024-2025</div>
                     <div class="card">
-                        <h3><i class="fas fa-vote-yea"></i> Application de Vote Sécurisée en Java</h3>
-                        <p>Développement d'une application de vote sécurisée avec architecture robuste et tests complets.</p>
+                        <h3><i class="fas fa-gamepad"></i> Unity Game Development Experience</h3>
+                        <p>One year of intensive game development using Unity 3D and C#. Created interactive gaming experiences with focus on performance optimization and user engagement.</p>
                         <div class="project-stats">
-                            <div class="stat">500+ utilisateurs simultanés</div>
-                            <div class="stat">15+ fonctionnalités</div>
-                            <div class="stat">95% couverture tests</div>
-                            <div class="stat">40% réduction bugs</div>
+                            <div class="stat">1+ year experience</div>
+                            <div class="stat">Unity 3D Engine</div>
+                            <div class="stat">C# Programming</div>
+                            <div class="stat">Game Physics</div>
+                            <div class="stat">UI/UX Design</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">Mars 2025</div>
+                    <div class="timeline-date">February 2025</div>
                     <div class="card">
-                        <h3><i class="fas fa-network-wired"></i> Réseaux Complexes en C</h3>
-                        <p>Architecture client-serveur avec programmation socket et optimisation des performances.</p>
+                        <h3><i class="fas fa-vote-yea"></i> Secure Voting Application in Java</h3>
+                        <p>Developed a secure voting application with robust architecture and comprehensive testing framework.</p>
                         <div class="project-stats">
-                            <div class="stat">100+ connexions simultanées</div>
-                            <div class="stat">30% amélioration performance</div>
-                            <div class="stat">0 deadlock</div>
+                            <div class="stat">500+ concurrent users</div>
+                            <div class="stat">15+ features</div>
+                            <div class="stat">95% test coverage</div>
+                            <div class="stat">40% bug reduction</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">Été 2025</div>
+                    <div class="timeline-date">January 2025</div>
                     <div class="card">
-                        <h3><i class="fas fa-lock"></i> Application de Messagerie Sécurisée</h3>
-                        <p>Conception d'une application de messagerie avec chiffrement bout-à-bout et authentification avancée.</p>
+                        <h3><i class="fas fa-cube"></i> Voting System Architecture in B Specification</h3>
+                        <p>Designed formal architecture using B Method with ProB validation for critical system reliability.</p>
                         <div class="project-stats">
-                            <div class="stat">1000+ messages/seconde</div>
-                            <div class="stat">95% réduction spam</div>
-                            <div class="stat">99.9% disponibilité</div>
+                            <div class="stat">99.9% reliability</div>
+                            <div class="stat">50+ test scenarios</div>
+                            <div class="stat">Formal verification</div>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">March 2025</div>
+                    <div class="card">
+                        <h3><i class="fas fa-network-wired"></i> Complex Networks in C</h3>
+                        <p>Client-server architecture with socket programming and performance optimization through multithreading.</p>
+                        <div class="project-stats">
+                            <div class="stat">100+ simultaneous connections</div>
+                            <div class="stat">30% performance improvement</div>
+                            <div class="stat">0 deadlocks</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Summer 2025</div>
+                    <div class="card">
+                        <h3><i class="fas fa-lock"></i> Secure Messaging Application</h3>
+                        <p>Designed messaging application with end-to-end encryption using Coq specifications for cryptographic protocols.</p>
+                        <div class="project-stats">
+                            <div class="stat">1000+ messages/second</div>
+                            <div class="stat">End-to-end encryption</div>
+                            <div class="stat">99.9% uptime</div>
+                            <div class="stat">Coq-verified protocols</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-dumbbell"></i> Personal & Athletic Background</h2>
+            <p style="font-size: 1.1em; margin-bottom: 25px; text-align: justify;">
+                My athletic background and leadership experience in sports have shaped essential engineering skills including <strong>team management</strong>, 
+                <strong>strategic thinking</strong>, and <strong>performance optimization</strong> - directly applicable to software development and project management.
+            </p>
+            <div class="personal-grid">
+                <div class="personal-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Football Coach & Leader</h3>
+                    <p><strong>U10 Team Coach (2 years)</strong><br>
+                    Led youth development programs, managed team dynamics, and developed strategic game plans.</p>
+                    <div class="engineering-benefit">
+                        <h4>🎯 Engineering Value:</h4>
+                        <p>Leadership skills, team coordination, strategic planning, and performance analysis essential for managing development teams.</p>
+                    </div>
+                </div>
+                
+                <div class="personal-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Civic Service in Sports</h3>
+                    <p><strong>Club Operations Manager</strong><br>
+                    Optimized club operations, managed resources, and improved organizational efficiency.</p>
+                    <div class="engineering-benefit">
+                        <h4>⚙️ Engineering Value:</h4>
+                        <p>Process optimization, resource management, and system improvement - core skills for software architecture and DevOps.</p>
+                    </div>
+                </div>
+                
+                <div class="personal-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Fitness & Discipline</h3>
+                    <p><strong>Regular Strength Training</strong><br>
+                    Consistent workout routine focusing on progressive improvement and goal achievement.</p>
+                    <div class="engineering-benefit">
+                        <h4>💪 Engineering Value:</h4>
+                        <p>Discipline, consistency, goal-oriented mindset, and continuous improvement - essential for code quality and project delivery.</p>
                     </div>
                 </div>
             </div>
@@ -465,130 +670,284 @@
 
         <div class="grid">
             <section class="section">
-                <h2><i class="fas fa-graduation-cap"></i> Formation</h2>
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">2023 - 2026</div>
                         <div class="card">
-                            <h3>Diplôme d'Ingénieur en Informatique</h3>
+                            <h3>Master of Engineering in Computer Science</h3>
                             <p><strong>Télécom SudParis</strong><br>
                             Institut Polytechnique de Paris<br>
-                            <em>Spécialisation : Cybersécurité et Développement Logiciel</em></p>
+                            <em>Specialization: Cybersecurity & Software Development</em></p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">2021 - 2023</div>
                         <div class="card">
-                            <h3>Classe Préparatoire MP</h3>
+                            <h3>Mathematics & Physics Preparatory Class</h3>
                             <p><strong>Lycée Jean-Bart</strong><br>
-                            Formation intensive en mathématiques et physique</p>
+                            Intensive training in mathematics and physics</p>
                         </div>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">2020</div>
                         <div class="card">
-                            <h3>Baccalauréat Scientifique</h3>
+                            <h3>Scientific Baccalauréat</h3>
                             <p><strong>Lycée de l'Europe</strong><br>
-                            Mention Très Bien</p>
+                            Highest Honors</p>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="section">
-                <h2><i class="fas fa-users"></i> Engagement Associatif</h2>
-                <div class="card">
-                    <h3><i class="fas fa-crown"></i> Vice-Président | KRYPTOSPHERE</h3>
-                    <p><strong>2024-2025</strong></p>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li>Organisé <strong>5 hackathons</strong> (200+ participants)</li>
-                        <li>Animé <strong>10 workshops</strong> sur Blockchain et IA</li>
-                        <li>Géré budget de <strong>15 000€</strong></li>
-                        <li>Augmenté l'adhésion de <strong>150%</strong></li>
-                    </ul>
-                </div>
-                
-                <div class="card">
-                    <h3><i class="fas fa-heart"></i> Bénévole | INT'ERVENIR</h3>
-                    <p><strong>2023-2025</strong></p>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li><strong>20+</strong> actions de solidarité</li>
-                        <li><strong>3 projets</strong> coordonnés</li>
-                        <li><strong>50+ bénévoles</strong> mobilisés</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-
-        <section class="section">
-            <h2><i class="fas fa-language"></i> Compétences Linguistiques</h2>
-            <div class="lang-progress">
-                <div class="lang-name">
-                    <span><strong>Français</strong></span>
-                    <span>Langue maternelle</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 100%"></div>
-                </div>
-            </div>
-            
-            <div class="lang-progress">
-                <div class="lang-name">
-                    <span><strong>Anglais</strong></span>
-                    <span>Avancé (C1)</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 90%"></div>
-                </div>
-            </div>
-            
-            <div class="lang-progress">
-                <div class="lang-name">
-                    <span><strong>Allemand</strong></span>
-                    <span>Intermédiaire (B2)</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 70%"></div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script>
-        // Animation des barres de progression
-        window.addEventListener('load', function() {
-            const progressBars = document.querySelectorAll('.progress-fill');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-        });
-
-        // Animation au scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
+if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
+        // Observe all sections
         document.querySelectorAll('.section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(30px)';
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add floating animation to cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Dynamic typing effect for the title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect after page load
+        setTimeout(() => {
+            const titleElement = document.querySelector('.title');
+            if (titleElement) {
+                const originalText = titleElement.textContent;
+                typeWriter(titleElement, originalText, 50);
+            }
+        }, 1000);
+
+        // Add particle effect
+        function createParticles() {
+            const particleContainer = document.querySelector('.floating-elements');
+            
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'floating-element';
+                particle.style.width = Math.random() * 20 + 10 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particleContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles
+        createParticles();
+
+        // Add click effect to skill tags
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.background = 'rgba(255, 255, 255, 0.4)';
+                
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.2)';
+                }, 200);
+            });
+        });
+
+        // Add counter animation for project stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat');
+            
+            counters.forEach(counter => {
+                const text = counter.textContent;
+                const numberMatch = text.match(/\d+/);
+                
+                if (numberMatch) {
+                    const finalNumber = parseInt(numberMatch[0]);
+                    const prefix = text.substring(0, text.indexOf(numberMatch[0]));
+                    const suffix = text.substring(text.indexOf(numberMatch[0]) + numberMatch[0].length);
+                    
+                    let currentNumber = 0;
+                    const increment = finalNumber / 50;
+                    
+                    const timer = setInterval(() => {
+                        currentNumber += increment;
+                        if (currentNumber >= finalNumber) {
+                            counter.textContent = prefix + finalNumber + suffix;
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = prefix + Math.floor(currentNumber) + suffix;
+                        }
+                    }, 30);
+                }
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.project-stats').forEach(stats => {
+            statsObserver.observe(stats);
+        });
+
+        // Add download functionality
+        document.querySelector('.download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create a temporary message
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> PDF functionality coming soon!';
+            this.style.background = 'linear-gradient(45deg, #28a745, #20c997)';
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+            }, 2000);
+        });
+
+        // Add mobile menu toggle (if needed)
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        }
+
+        // Add scroll-to-top functionality
+        const scrollToTop = document.createElement('button');
+        scrollToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollToTop.className = 'scroll-to-top';
+        scrollToTop.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        `;
+
+        document.body.appendChild(scrollToTop);
+
+        // Show/hide scroll-to-top button
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTop.style.opacity = '1';
+                scrollToTop.style.transform = 'scale(1)';
+            } else {
+                scrollToTop.style.opacity = '0';
+                scrollToTop.style.transform = 'scale(0)';
+            }
+        });
+
+        // Scroll to top functionality
+        scrollToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add theme toggle functionality
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        }
+
+        // Initialize theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        // Add print functionality
+        function printCV() {
+            window.print();
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                // Close any open modals or menus
+                document.querySelectorAll('.modal, .dropdown').forEach(element => {
+                    element.style.display = 'none';
+                });
+            }
+        });
+
+        // Performance optimization: lazy loading for images
+        const imageObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
         });
     </script>
 </body>
