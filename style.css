@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #dff1ff, #ffe8f0);
+    color: #333;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  
+  header {
+    padding: 2rem 1rem;
+    background: #cce4ff;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    background-color: #ffb6b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff9296;
+  }
+  
+  #animation {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .bird {
+    width: 80px;
+    height: 80px;
+    background-image: url('https://i.imgur.com/vyR6b1l.png');
+    background-size: cover;
+    position: absolute;
+  }
+  
+  #bird1 {
+    top: 30px;
+    left: -100px;
+    animation: fly 12s linear infinite;
+  }
+  
+  #bird2 {
+    top: 100px;
+    left: -120px;
+    animation: fly 15s linear infinite;
+    animation-delay: 3s;
+  }
+  
+  @keyframes fly {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(110vw); }
+  }
+  
+  img {
+    max-width: 200px;
+    margin-top: 1rem;
+    border-radius: 12px;
+  }
+  
+  footer {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+  
